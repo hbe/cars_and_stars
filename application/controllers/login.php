@@ -19,7 +19,69 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login');
+		$this->login_page(NULL);
+	}
+
+	private function login_page($data)
+	{
+		$this->load->helper('form');
+		$this->load->view('includes/header');
+		$this->load->view('page/login', $data);
+		$this->load->view('includes/footer');
+	}
+
+	public function logon()
+	{
+		$this->load->model('User_model');
+
+		$login = $_POST['login'];
+		$password = $_POST['password'];
+
+		
+		if($login !== "" && $password !== "") 
+		{ 
+			$check_login = $this->User_model->check_login($login, $password);
+
+			if(count($check_login) === 0)
+			{
+				$data['emptyLogin'] = "Invalid Login";
+				
+				$this->login_page($data);
+			}
+			else
+			{
+				$this->session->set_userdata('login_state', TRUE);
+				header("Location: /dashboard");
+			}			
+		}
+		else
+		{
+			$data['emptyLogin'] = ($login === "") ? "Please enter your login" : "";
+			$data['emptyPassword'] = ($password === "") ? "Please enter your password" : "";
+
+			$this->login_page($data);
+		}			
+	}
+
+	public function dashboard()
+	{
+		$this->dashboard_page();
+	}
+
+	private function dashboard_page()
+	{
+    	$this->load->view('includes/extraHeader');
+		$this->load->view('includes/header');
+		$this->load->view('page/dashboard');
+		$this->load->view('includes/footer');
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		echo "You are successfully Logout, will be directed in 5 seconds";
+		header( "refresh:5;url=/" );
+
 	}
 }
 
