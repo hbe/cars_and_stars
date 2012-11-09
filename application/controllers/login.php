@@ -19,13 +19,22 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->login_page(NULL);
+		if (!$this->session->userdata('login_state')) 
+		{
+      		$this->login_page(NULL);
+    	}
+    	else
+    	{
+    		$this->dashboard_page();
+    	}
+		
 	}
 
 	private function login_page($data)
 	{
 		$this->load->helper('form');
 		$this->load->view('includes/header');
+		$this->load->view('includes/menu');
 		$this->load->view('page/login', $data);
 		$this->load->view('includes/footer');
 	}
@@ -70,8 +79,10 @@ class Login extends CI_Controller {
 
 	private function dashboard_page()
 	{
-    	$this->load->view('includes/extraHeader');
+		$page['page'] = 1;
+    	$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
+		$this->load->view('includes/menu', $page);
 		$this->load->view('page/dashboard');
 		$this->load->view('includes/footer');
 	}

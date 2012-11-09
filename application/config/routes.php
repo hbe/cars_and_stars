@@ -41,6 +41,9 @@
 $route['default_controller'] = "login";
 $route['dashboard'] = "login/dashboard";
 $route['logout'] = "login/logout";
+$route['new-test'] = "marking_system";
+$route['test'] = "marking_system/test";
+$route['test-result'] = "marking_system/test_result";
 $route['404_override'] = '';
 
 
