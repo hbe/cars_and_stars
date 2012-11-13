@@ -65,7 +65,16 @@ class Marking_system extends CI_Controller {
 		}
 		for($a=1; $a<=$answer['total_answer']; $a++)
 		{
-			$stud_answer .= $_POST[$a] . ","; 
+			echo $a . "=" . $answer['total_answer'] . "<br>";
+			if($a != $answer['total_answer'])
+			{
+				$stud_answer .= $_POST[$a] . ","; 
+			}
+			else
+			{
+				$stud_answer .= $_POST[$a];
+			}
+
 			if($check_answer[$a] == $_POST[$a])
 				$correct_answer++;
 		}
