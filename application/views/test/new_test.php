@@ -11,7 +11,7 @@
 			{
 				?>
 				<label class="radio inline">
-				<input type="radio" name="book" id="optionsRadios1" value="<?php echo $list->book ?>" checked>
+				<input type="radio" name="book" style="border:1px solid #000; width:50px;" id="optionsRadios1" value="<?php echo $list->book ?>" checked>
 				<?php echo $list->book ?>
 				</label>
 				<?php
@@ -29,5 +29,4 @@
 			</form>
 
 			</div>
-
 </div>

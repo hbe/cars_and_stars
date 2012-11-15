@@ -88,7 +88,7 @@ class Login extends CI_Controller {
 		$this->load->view('includes/footer');
 	}
 
-	private function student_list_view_page()
+	private function student_list_page()
 	{	
 		$page['page'] = 3;
 		$this->load->view('includes/header');

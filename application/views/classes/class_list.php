@@ -14,19 +14,14 @@
 
 		<div class="student-content">
 			<form class="form-search pull-right">
-				    <div class="input-prepend">
-    <div class="btn-group">
-    <button class="btn dropdown-toggle" data-toggle="dropdown">
-    Search By
-    <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-    	<li><a href="#">Action</a></li>
-    </ul>
-    </div>
-    <input class="span2" id="prependedDropdownButton" type="text">
-    </div>
-		    	<button type="submit" class="btn">Search</button>
+             <select class="span2" style="padding-top:7px;">
+                        <option>Class</option>
+                        <option>Student ID</option>
+                        <option>Student Name</option>
+                        <option>Test</option>
+                    </select>
+                    <input type="text" class="input-medium">
+                    <button type="submit" class="btn">Search</button>
 		    </form>
 			<table class="table table-striped">
     		<tr>

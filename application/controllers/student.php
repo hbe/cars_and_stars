@@ -46,6 +46,9 @@ class Student extends CI_Controller {
 		$this->load->view('student/student_list');
 		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
+
+		//$data['query'] = $this->db->get('student');
+
 	}
 
 	private function student_testList_page($data)
