@@ -145,7 +145,7 @@
 
 		    <div class="control-group">
 			<div class="controls">
-			<button type="submit" onclick="history.go(-1)" class="btn formBtn">Back</button> <button type="submit" class="btn btn-primary  formBtn">Update</button>
+			<button type="submit" onclick="history.back(); return false;"  class="btn formBtn">Back</button> <button type="submit" class="btn btn-primary  formBtn">Update</button>
 			</div>
 			</div>
 

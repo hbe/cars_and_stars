@@ -131,8 +131,7 @@
 
 		    <div class="control-group">
 			<div class="controls">
-				<?php $url = htmlspecialchars($_SERVER['HTTP_REFERER']); ?>
-			<button onclick="<?php echo $url ?>" class="btn formBtn">Back</button> <button type="submit" class="btn btn-primary formBtn">Submit</button>
+			<button onclick="history.back(); return false;" class="btn formBtn">Back</button> <button type="submit" class="btn btn-primary formBtn">Submit</button>
 			</div>
 			</div>
 
