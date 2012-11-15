@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Student extends CI_Controller {
+class Classes extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,68 +19,57 @@ class Student extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->student_list(NULL);
+		$this->class_list(NULL);
 	}
 
-	public function student_testList()
+	private function class_list($data)
 	{
-		$this->student_testList_page(NULL);
-	}
-
-	public function student_add()
-	{
-		$this->student_add_page(NULL);
-	}
-
-	public function student_edit()
-	{
-		$this->student_edit_page(NULL);
-	}
-
-	private function student_list($data)
-	{
-		$data['page'] = 3;
+		$data['page'] = 12;
 		$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
 		$this->load->view('includes/template_top', $data);
-		$this->load->view('student/student_list');
+		$this->load->view('classes/class_list');
 		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
-	private function student_testList_page($data)
+/*
+
+
+	public function class_add()
 	{
-		$data['page'] = 9;
-		$this->load->view('includes/loginChecker');
-		$this->load->view('includes/header');
-		$this->load->view('includes/template_top', $data);
-		$this->load->view('student/student_testList');
-		$this->load->view('includes/template_bottom');
-		$this->load->view('includes/footer');
+		$this->class_add_page(NULL);
 	}
 
-	private function student_add_page($data)
+	public function class_edit()
+	{
+		$this->class_edit_page(NULL);
+	}
+
+	private function class_add_page($data)
 	{
 		$data['page'] = 10;
 		$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
 		$this->load->view('includes/template_top', $data);
-		$this->load->view('student/student_add');
+		$this->load->view('class/class_add');
 		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
-	private function student_edit_page($data)
+	private function class_edit_page($data)
 	{
 		$data['page'] = 11;
 		$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
 		$this->load->view('includes/template_top', $data);
-		$this->load->view('student/student_edit');
+		$this->load->view('class/class_edit');
 		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
+
+*/
 
 }
 

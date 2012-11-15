@@ -1,13 +1,6 @@
 <div class="content">
 		<div class="title shift-left">
-			<h3>Student List View</h3>
-		</div>
-
-		<div class="title-borderless shift-right">
-			<br />
-			<form>
-				<button onclick="window.location.href='student-add';" class="btn pull-right" type="button">Add New Student</button>
-			</form>
+			<h3>Test Group List View</h3>
 		</div>
 
 		<br clear="all" />
@@ -31,11 +24,14 @@
 			<table class="table table-striped">
     		<tr>
     			<td>ID</td>
-    			<td>Student Name</td>
+    			<td>Test Group Name</td>
     			<td>Class</td>
-    			<td>Teacher</td>
+                <td>Teacher</td>
+    			<td>Book</td>
+    			<td>Test Date</td>
     			<td>Report</td>
-    			<td>Control</td>
+                <td>Student List</td>
+                <td>Control</td>
     		</tr>
     		</table>
 		</div>

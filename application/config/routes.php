@@ -43,8 +43,14 @@ $route['dashboard'] = "login/dashboard";
 $route['logout'] = "login/logout";
 $route['new-test'] = "marking_system";
 $route['test'] = "marking_system/test";
+$route['test-wizard'] = "marking_system/test_wizard";
 $route['test-result'] = "marking_system/test_result";
-$route['student-list'] = "student"; 
+$route['test-list'] = "marking_system/test_list";
+$route['student-list'] = "student";
+$route['student-testList'] = "student/student_testList";
+$route['student-add'] = "student/student_add";
+$route['student-edit'] = "student/student_edit";
+$route['class-list'] = "classes";
 $route['404_override'] = '';
 
 

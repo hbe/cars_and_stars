@@ -22,6 +22,16 @@ class Marking_system extends CI_Controller {
 		$this->new_test_page(NULL);
 	}
 
+	public function test_list()
+	{
+		$this->testGroupList_page(NULL);
+	}
+
+	public function test_wizard()
+	{
+		$this->test_wizard_page(NULL);
+	}
+
 	private function new_test_page($data)
 	{
 		$data['page'] = 2;
@@ -149,6 +159,26 @@ class Marking_system extends CI_Controller {
 		$today = date("d/m/y");
 
 		$this->Test_model->setStudentAnswer($stud_id, $answer, $mark, $today);
+	}
+
+	private function testGroupList_page() {
+		$data['page'] = 13;
+    	$this->load->view('includes/loginChecker');
+		$this->load->view('includes/header');
+		$this->load->view('includes/template_top', $data);
+		$this->load->view('test/test_list');
+		$this->load->view('includes/template_bottom');
+		$this->load->view('includes/footer');
+	}
+
+	private function test_wizard_page() {
+		$data['page'] = 14;
+    	$this->load->view('includes/loginChecker');
+		$this->load->view('includes/header');
+		$this->load->view('includes/template_top', $data);
+		$this->load->view('test/test_wizard');
+		$this->load->view('includes/template_bottom');
+		$this->load->view('includes/footer');
 	}
 
 }

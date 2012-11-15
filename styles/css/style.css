@@ -172,7 +172,7 @@
  }
 
  .logout {
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 15px;
  }
 
@@ -192,9 +192,35 @@
   display: block;
 }
 
+.red {
+  color:#B94A48;
+}
 
+.requiredField {
+  margin-top: 15px;
+  font-size: 12px;
+  top: 25px;
+  height: 10px;
+}
 
+.content-left {
+  width: 50%;
+  float: left;
+}
 
+.content-right {
+  float: left;
+  width: 40%;
+}
 
+.input-left {
+  margin-left: -100px;
+}
 
+.textarea-width {
+  width: 330px;
+}
 
+.formBtn {
+  width: 75px;
+}

@@ -10,7 +10,7 @@
     <ul class="breadcrumb full-width">
     <li><a href="dashboard">Home</a> <span class="divider">/</span></li>
     <?php if(isset($page)) { 
-			echo ($page === 1)? "<li class='active'>Dashboard</li>" : "<li><a href='dashboard'>Dashboard</a> <span class='divider'>/</span></li>";
+			echo ($page === 1)? "<li class='active'>Dashboard</li>" : "";
 	 	} 
     ?>
     <?php if(isset($page)) { 
@@ -19,6 +19,30 @@
     ?>
     <?php if(isset($page)) { 
 			echo ($page === 3)? "<li class='active'>Student List View</li>" : "";
+	 	} 
+    ?>
+    <?php if(isset($page)) { 
+			echo ($page === 9)? "<li><a href='student-list'>Student List View</a> <span class='divider'>/</span></li><li class='active'>Student Test List View</li>" : "";
+	 	} 
+    ?>
+    <?php if(isset($page)) { 
+			echo ($page === 10)? "<li><a href='student-list'>Student List View</a> <span class='divider'>/</span></li><li class='active'>Add New Student</li>" : "";
+	 	} 
+    ?>
+    <?php if(isset($page)) { 
+			echo ($page === 11)? "<li><a href='student-list'>Student List View</a> <span class='divider'>/</span></li><li class='active'>Edit Student</li>" : "";
+	 	} 
+    ?>
+    <?php if(isset($page)) { 
+			echo ($page === 12)? "<li class='active'>Class List View</li>" : "";
+	 	} 
+    ?>
+    <?php if(isset($page)) { 
+			echo ($page === 13)? "<li class='active'>Test Group List View</li>" : "";
+	 	} 
+    ?>
+     <?php if(isset($page)) { 
+			echo ($page === 14)? "<li class='active'>Testing Wizard</li>" : "";
 	 	} 
     ?>
     </ul>
@@ -38,17 +62,17 @@
 	</div>
 	<div class="menu">
 		<?php if(isset($page)) { 
-			echo ($page === 3)? "<b>Student List View</b>" : "<a href='/student-list'>Student List View</a>";
+			echo ($page === 3 || $page === 9 || $page === 10)? "<b>Student List View</b>" : "<a href='/student-list'>Student List View</a>";
 	 	} ?>
 	</div>
 	<div class="menu">
 		<?php if(isset($page)) { 
-			echo ($page === 4)? "<b>Test List View</b>" : "<a href=''>Test List View</a>";
+			echo ($page === 4 || $page === 13 ||  $page === 14)? "<b>Test List View</b>" : "<a href='/test-list'>Test List View</a>";
 	 	} ?>
 	</div>
 	<div class="menu">
 		<?php if(isset($page)) { 
-			echo ($page === 5)? "<b>Class List View</b>" : "<a href=''>Class List View</a>";
+			echo ($page === 5 || $page === 12)? "<b>Class List View</b>" : "<a href='class-list'>Class List View</a>";
 	 	} ?>
 	</div>
 	<div class="menu">

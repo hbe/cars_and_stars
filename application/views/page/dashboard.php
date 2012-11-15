@@ -9,7 +9,7 @@
 				<img src="/media/img/add.png"/>
 			</div>
 
-			<div onclick="window.location.href='student_list_view';" class="box">
+			<div onclick="window.location.href='student-list';" class="box">
 				<br/><br/>
 				<h3>Student List View</h3>
 				<img src="/media/img/list.png"/>
@@ -20,5 +20,4 @@
 				<h3>Test List View</h3>
 				<img src="/media/img/list.png"/>
 			</div>
-			
-	</div>
+</div>
