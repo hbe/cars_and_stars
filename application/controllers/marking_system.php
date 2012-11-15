@@ -65,8 +65,6 @@ class Marking_system extends CI_Controller {
 	public function test_result()
 	{	
 
-		$this->test_result_page(NULL);
-
 		$answer = $this->book_processor($this->getBook($_POST['book']));
 
 		$b = 1;
@@ -79,12 +77,15 @@ class Marking_system extends CI_Controller {
 		}
 		for($a=1; $a<=$answer['total_answer']; $a++)
 		{
+			$b = $a-1;
 			if($a != $answer['total_answer'])
 			{
+				$student_answers[$b] = $_POST[$a];
 				$stud_answer .= $_POST[$a] . ","; 
 			}
 			else
 			{
+				$student_answers[$b] = $_POST[$a];
 				$stud_answer .= $_POST[$a];
 			}
 
@@ -96,7 +97,13 @@ class Marking_system extends CI_Controller {
 
 		$this->setStudentAnswer("123", $stud_answer, $total_mark);
 
+		//this is the student answers that has been submited
+
+		$data = $this->book_processor($this->getBook($_POST['book']));
+		$data['total_section_of_question'] = $data['total_answer']/$data['total_question_type'];
+		$data['student_answers'] = $student_answers;
 		
+		$this->test_result_page($data);
 	}
 
 	private function book_processor($data)
