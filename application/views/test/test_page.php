@@ -5,7 +5,6 @@
 
 			<div class="test-content">
 				<p>Please select the choices below.</p>
-
 					<form method="post" action="/test-result">
 					<input type="hidden" name="book" value="<?php echo $book ?>"/>
 					<?php 
@@ -17,10 +16,12 @@
 							for($c=1; $c<=$total_option; $c++)
 							{
 								?>
+								<div style="border:1px solid #000">
 								<label class="radio inline">
 								<input type="radio" name="<?php echo $d-1 ?>" id="optionsRadios2" value="<?php echo $c ?>">
 								<?php echo $option[$c-1] ?> 
 								</label>
+								</div>
 								<?php
 							}
 							?>
@@ -28,7 +29,7 @@
 							<?php
 						}
 						?>
-						<br />
+						<br /> 
 						<?php
 					}
 					?>

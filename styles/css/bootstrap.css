@@ -1152,7 +1152,19 @@ textarea::-webkit-input-placeholder {
 .radio,
 .checkbox {
   min-height: 20px;
-  padding-left: 20px;
+  border:solid 1px #4a4a4a;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #F4f4f4;
+  padding-left: 15px;
+  padding-bottom: 7px;
+}
+
+.radio:hover,
+.checkbox:hover {
+  background-color: #F0F8FF;
 }
 
 .radio input[type="radio"],
@@ -1169,8 +1181,8 @@ textarea::-webkit-input-placeholder {
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
-  padding-top: 5px;
-  margin-bottom: 0;
+  padding-top: 7px;
+  margin-bottom: 7px;
   vertical-align: middle;
 }
 
