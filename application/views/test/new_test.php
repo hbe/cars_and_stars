@@ -1,17 +1,33 @@
-<form  method="post" action="/test">
-<?php 
+<div class="content">
+		<div class="title">
+			<h3>Start a New Test</h3>
+		</div>
 
-foreach($books as $list)
-{
-	?>
-	<input type="radio" name="book" value="<?php echo $list->book ?>"><?php echo $list->book ?><br>
-	<?php
-}
+			<div class="test-content">
+				<p>Please select a Book to begin.</p>
+			<form  method="post" action="/test">
+			<?php 
+			foreach($books as $list)
+			{
+				?>
+				<label class="radio inline">
+				<input type="radio" name="book" id="optionsRadios1" value="<?php echo $list->book ?>" checked>
+				<?php echo $list->book ?>
+				</label>
+				<?php
+			}
 
-?>
-<br />
-<?php
-echo (isset($empty))? $empty . "<br />" : "";
-?>
-<input type="submit" value="Begin Test">
-</form>
+			?>
+			<br />
+			<?php
+			echo (isset($empty))? $empty . "<br />" : "";
+			?>
+			<br />
+
+   			<button class="btn btn-primary pull-left" type="submit">Begin Test</button>
+
+			</form>
+
+			</div>
+
+</div>

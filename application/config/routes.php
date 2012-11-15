@@ -44,6 +44,7 @@ $route['logout'] = "login/logout";
 $route['new-test'] = "marking_system";
 $route['test'] = "marking_system/test";
 $route['test-result'] = "marking_system/test_result";
+$route['student-list'] = "student"; 
 $route['404_override'] = '';
 
 

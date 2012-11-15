@@ -1,0 +1,200 @@
+/*!
+ * HBE Cars and Stars Portal
+ *
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+ }
+
+ .wrapper-login {
+  position:absolute;
+	top: 40%;
+	left: 50%;
+	width:375px;
+	height:345px;
+	margin-top: -9em; /*set to a negative number 1/2 of your height*/
+	margin-left: -15em; /*set to a negative number 1/2 of your width*/
+	background-color: #fff;
+  border:solid 1px #4a4a4a;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 20px;
+  background-color: #f4f4f4;
+ }
+
+.wrapper-dashboard {
+  top: 45px;
+  position: relative;
+  width:875px;
+  height:545px;
+  margin: 0 auto;
+  background-color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding-left: 20px;
+ }
+
+ .breadcrumbs {
+  padding-top: 5px;
+  text-align: center;
+ }
+
+ .menu {
+  float: left;
+  position: relative;
+  padding-top: 15px;
+  padding-left: 15px;
+  display: block;
+  top: 25px;
+  z-index: 1;
+  width: 150px;
+  min-height: 35px;
+  height:auto;
+  border:1px solid #000;
+  margin-bottom: 5px;
+  background-color: #F4f4f4;
+ }
+
+ .menu:hover {
+  background-color: #F0F8FF;
+  color: #005580;
+ }
+
+ .main-menu {
+  position: absolute;
+  display: block;
+  width: 200px;
+  left: -146px;
+ }
+
+ .content {
+  z-index: 0;
+  width: 100%;
+  padding-left:25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-height: 500px;
+  height:auto;
+  border:1px solid #000;
+ }
+
+  .login {
+  	margin-left: 25px;
+  	width: 100%;
+  	height: 100%;
+ }
+
+ .title-color {
+ 	color:#FF9900;
+ }
+
+.error {
+  color: #BF3330;
+  font-size: 12px;
+}
+
+.dashboard-top {
+  width: 927px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.dashboard-bottom {
+  width: 927px;
+  position: relative;
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color:#000;
+  font-size:11px;
+}
+
+.full-width {
+  width: 897px;
+}
+
+.title {
+  border-bottom: 1px solid #000;
+  width: 350px;
+  padding-left: 15px;
+}
+
+.title-borderless {
+  border-bottom: 0px;
+  width: 350px;
+  text-align: right;
+  padding-left: 15px;
+}
+
+.centered {
+  margin: 0 auto;
+  width: 101%;
+  min-height: 300px;
+}
+
+.box {
+  color: #0088CC;
+  float: left;
+  margin-top: 130px;
+  width: 279px;
+  text-align: center;
+  height: 200px;
+  display: block;
+  border: 1px solid #000;
+  margin-right: 16px;
+  background-color: #F4f4f4;
+}
+
+.box-last {
+  color: #0088CC;
+  float: left;
+  margin-top: 130px;
+  width: 279px;
+  text-align: center;
+  display: block;
+  height: 200px;
+  border: 1px solid #000;
+  margin-right: 0px;
+  background-color: #F4f4f4;
+}
+
+ .box:hover, .box-last:hover {
+  background-color: #F0F8FF;
+  color: #005580;
+  cursor: pointer;
+ }
+
+ .logout {
+  margin-left: 15px;
+  margin-top: 15px;
+ }
+
+.test-content, .student-content {
+  padding-top: 15px;
+}
+
+.shift-left{
+  float: left;
+}
+
+.shift-right {
+  float: right;
+}
+
+.blocked {
+  display: block;
+}
+
+
+
+
+
+
+

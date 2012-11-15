@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Hawker Brownlow Education Cars and Stars</title>
-</head>
-<body>
+    <html>
+    <head>
+    <title>Hawker Brownlow Education Cars and Stars</title>
+    <!-- Bootstrap -->
+    <link href="/styles/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/styles/css/style.css" rel="stylesheet" media="screen">
+    </head>
+    <body>

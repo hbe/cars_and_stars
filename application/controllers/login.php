@@ -54,7 +54,6 @@ class Login extends CI_Controller {
 			if(count($check_login) === 0)
 			{
 				$data['emptyLogin'] = "Invalid Login";
-				
 				$this->login_page($data);
 			}
 			else
@@ -82,17 +81,42 @@ class Login extends CI_Controller {
 		$page['page'] = 1;
     	$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
-		$this->load->view('includes/menu', $page);
+		$this->load->view('includes/template_top', $page);
+		//$this->load->view('includes/menu', $page);
 		$this->load->view('page/dashboard');
+		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
+	}
+
+	private function student_list_view_page()
+	{	
+		$page['page'] = 3;
+		$this->load->view('includes/header');
+		$this->load->view('includes/loginChecker');
+		$this->load->view('includes/template_top', $page);
+		$this->load->view('page/student_list_view');
+		$this->load->view('includes/template_bottom');
+		$this->load->view('includes/footer');
+	}
+
+	public function student_list()
+	{
+		$this->student_list_view_page();
+	}
+
+	private function logout_page()
+	{
+		$this->load->view('includes/header');
+		$this->load->view('page/logout');
+		//echo "You are successfully Logout, will be directed in 5 seconds";
+		$this->load->view('includes/footer');	
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		echo "You are successfully Logout, will be directed in 5 seconds";
 		header( "refresh:5;url=/" );
-
+		$this->logout_page();
 	}
 }
 

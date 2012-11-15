@@ -28,8 +28,9 @@ class Marking_system extends CI_Controller {
 		$data['books'] = $this->getAllBooks();
 		$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
-		$this->load->view('includes/menu', $data);
+		$this->load->view('includes/template_top', $data);
 		$this->load->view('test/new_test');
+		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
@@ -52,7 +53,10 @@ class Marking_system extends CI_Controller {
 	}
 
 	public function test_result()
-	{
+	{	
+
+		$this->test_result_page(NULL);
+
 		$answer = $this->book_processor($this->getBook($_POST['book']));
 
 		$b = 1;
@@ -65,7 +69,6 @@ class Marking_system extends CI_Controller {
 		}
 		for($a=1; $a<=$answer['total_answer']; $a++)
 		{
-			echo $a . "=" . $answer['total_answer'] . "<br>";
 			if($a != $answer['total_answer'])
 			{
 				$stud_answer .= $_POST[$a] . ","; 
@@ -83,7 +86,6 @@ class Marking_system extends CI_Controller {
 
 		$this->setStudentAnswer("123", $stud_answer, $total_mark);
 
-		//$this->test_result_page($result);
 		
 	}
 
@@ -108,8 +110,9 @@ class Marking_system extends CI_Controller {
 		$data['page'] = 2;
     	$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
-		$this->load->view('includes/menu', $data);
+		$this->load->view('includes/template_top', $data);
 		$this->load->view('test/test_page');
+		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
@@ -118,8 +121,9 @@ class Marking_system extends CI_Controller {
 		$data['page'] = 2;
     	$this->load->view('includes/loginChecker');
 		$this->load->view('includes/header');
-		$this->load->view('includes/menu', $data);
+		$this->load->view('includes/template_top', $data);
 		$this->load->view('test/test_result');
+		$this->load->view('includes/template_bottom');
 		$this->load->view('includes/footer');
 	}
 
