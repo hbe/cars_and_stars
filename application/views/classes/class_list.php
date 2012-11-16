@@ -14,7 +14,7 @@
 
 		<div class="student-content">
 			<form class="form-search pull-right">
-             <select class="span2" style="padding-top:7px;">
+             <select class="span2 radioAlign">
                         <option>Class</option>
                         <option>Student ID</option>
                         <option>Student Name</option>

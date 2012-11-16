@@ -1152,14 +1152,14 @@ textarea::-webkit-input-placeholder {
 .radio,
 .checkbox {
   min-height: 20px;
-  border:solid 1px #4a4a4a;
+  width: 80px;
+  background-color: #F4f4f4;
+  padding-left: 35px;
+  padding-bottom: 7px;
+  /** border:solid 1px #4a4a4a;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 150px;
-  background-color: #F4f4f4;
-  padding-left: 15px;
-  padding-bottom: 7px;
+  border-radius: 5px; **/
 }
 
 .radio:hover,

@@ -9,21 +9,46 @@
 			<form  method="post" action="/test">
 
 			<br />
-			Enter the student ID: <input type="textbox" name="student-id" />
+
+			<table>
+			<tr>
+			<td class="testform">
+				Enter the Student ID:
+			</td>
+			<td class="testform-input">
+				<input type="text" placeholder="Student ID" name="student-id" />
+			</td>
+			</tr>
+			</table>
+
 			<br />
-			<br />
+
 			<div id="pick-group">
-				Pick your test group: 
-				<select>
-					<option>Choose here</option>
-				</select>
-			
-				<button type="button" class="btn" onclick="showCreateNewTestGroup()">Create a new test group</button>
+
+				<table>
+				<tr>
+				<td class="testform">
+					Pick your test group: 
+				</td>
+				<td class="testform-input">
+					<select class="radioAlign">
+						<option>Choose here</option>
+					</select>
+				</td>
+				<td class="testform-inputBtn">
+					<button type="button" class="btn" onclick="showCreateNewTestGroup()">Create a New Test Group</button>
+				</td>
+				</tr>
+				</table>
+
 			</div> 
+
 			<div id="new-group">
-				<button type="button" class="btn" onclick="showPickTestGroup()">Choose your existing test group</button> 
+				<button type="button" class="btn" onclick="showPickTestGroup()">Choose Existing Test Group</button> 
 			</div>
+
 			<br />
+
 			<div id="radio">
 				<?php 
 				foreach($books as $list)
@@ -35,8 +60,6 @@
 					</label>
 					<?php
 				}
-
-
 				?>
 			</div>
 			
@@ -55,11 +78,13 @@
 			</div>
 
 </div>
+
 <script type="text/JavaScript">
 	$('#radio').hide();
 	$('#new-group').hide();
 	$("#createOrPick").val("0");
 </script>
+
 <script type"text/JavaScript">
 
 	function showCreateNewTestGroup()
